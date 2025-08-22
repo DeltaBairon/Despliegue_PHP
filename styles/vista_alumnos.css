@@ -1,0 +1,172 @@
+/* FUENTE FUTURISTA */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
+    color: #d3e0ea;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* CONTENEDORES */
+.container {
+    padding: 2rem;
+}
+
+/* TARJETA IZQUIERDA */
+.card {
+    border: 1px solid #00ffff33;
+    border-radius: 16px;
+    background: #1a1f2a;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    color: #d3e0ea;
+}
+
+.card-header {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+/* INPUTS */
+.form-control {
+    background: #0f1a2b;
+    border: 1px solid #00ffff55;
+    color: #ffffff;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.form-control:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 8px #00ffff88;
+    background-color: #0a192f;
+    color: #ffffff;
+}
+
+/* BOTONES */
+.btn {
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-success {
+    background-color: #00c853;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #00b342;
+}
+
+.btn-warning {
+    background-color: #ffc400;
+    color: black;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #ff5252;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #e53935;
+}
+
+.btn-group {
+    margin-top: 1rem;
+}
+
+/* TABLA DERECHA */
+.table {
+    background: #131a24;
+    color: #ffffff;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.08);
+}
+
+.table thead th {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.table td {
+    padding: 14px;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    border-top: 1px solid #0f2233;
+    text-align: center;
+}
+
+/* CORRECCIÓN ALINEACIÓN */
+.table th, .table td {
+    text-align: center;
+}
+
+/* CURSOS */
+.table a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.table a:hover {
+    text-decoration: underline;
+}
+
+/* BOTONES EN LA TABLA */
+input[type="submit"] {
+    background-color: #003b6f;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0066cc;
+}
+
+/* OCULTAR INPUT ID */
+input[type="text"]#id {
+    display: none;
+}
+
+/* SELECT TOMSELECT */
+.ts-control {
+    border-radius: 12px !important;
+    background-color: #0f1a2b !important;
+    color: #ffffff !important;
+    border: 1px solid #00ffff88 !important;
+}
+
+.ts-dropdown {
+    background-color: #1a1f2a !important;
+    color: #ffffff !important;
+    border-radius: 12px;
+}

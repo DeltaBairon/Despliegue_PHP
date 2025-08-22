@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
+    color: #d3e0ea;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* CONTENEDOR CENTRAL */
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* TARJETA DE LOGIN */
+.card {
+    background: #1a1f2a;
+    border: 1px solid #00ffff33;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* CABECERA DE TARJETA */
+.card-header {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+/* FORMULARIO */
+.form-label {
+    color: #d3e0ea;
+    font-weight: 600;
+}
+
+.form-control {
+    background-color: #0f1a2b;
+    border: 1px solid #00ffff55;
+    color: #ffffff;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 8px #00ffff88;
+    background-color: #0a192f;
+}
+
+/* BOTÓN */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+}
+
+/* ALERTA */
+.alert-danger {
+    background-color: #ff5252;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 82, 82, 0.3);
+}

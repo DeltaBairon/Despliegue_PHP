@@ -1,0 +1,66 @@
+/* FUENTE FUTURISTA */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
+    color: #d3e0ea;
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTENEDOR BIENVENIDA */
+.p-5.bg-light {
+    background: radial-gradient(ellipse at center, #1b2735 0%, #090a0f 100%);
+    border: 1px solid #00ffff33;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #d3e0ea;
+    margin: 3rem auto;
+}
+
+/* TÍTULOS */
+.display-3 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #00ffff;
+}
+
+/* LÍNEA DIVISORA */
+hr.my-2 {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    margin: 2rem 0;
+}
+
+/* TEXTO LEAD */
+.lead {
+    font-size: 1.2rem;
+    color: #a0cbe8;
+}
+
+/* BOTÓN */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+/* ENLACE */
+a.btn {
+    text-decoration: none;
+    color: #ffffff;
+}

@@ -99,3 +99,15 @@ ________________________________________
 ________________________________________
 Conclusión
 Este manual ofrece un flujo completo para instalar, configurar y desplegar aplicaciones PHP con PostgreSQL en EC2, incluyendo resolución de errores comunes y glosario de comandos para referencia rápida. Con él, cualquier usuario puede replicar el despliegue de manera segura y ordenada.
+
+
+#Manual de uso de la aplicación.
+*La apliación tiene una funcionalidad muy sencialla la cual es el registro y generación de certificados de un determinado curso a un determinado estudiante /alumno, su uso es muy básico y se especifica a continuación.
+
+1. Una vez desplegada accederás a través de la URL http://18.217.17.141/Despliegue_PHP, el cual te llevará al index principal.
+2. User = "admin", password "admin".
+3. En el nav bar podrás identificar las secciones del proyecto en el que podrás registrar, actualizar y/o eliminar estudiantes/alumnos y cursos.
+4. Tener en cuenta que un alumno solo puede registrar los cursos que existan en la tabla cursos, si se desea registra un alumno con un curso primero el curso debe ser creado en su respectiva tabla.
+5. Al registra un alumno en un curso se habilita un link de descarga para poder generar los respectivos certificados.
+6. El certificado contiene el nombre del estudiante y el título del curso seleccionado.
+

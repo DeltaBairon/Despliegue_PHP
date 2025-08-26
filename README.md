@@ -1,13 +1,12 @@
 📝 Manual Completo de Despliegue de Aplicación PHP con PostgreSQL en EC2
 ________________________________________
 Introducción
-Este manual detalla paso a paso cómo desplegar una aplicación PHP en un servidor EC2 de AWS, configurar Apache y PostgreSQL, restaurar un backup de base de datos, conectar la aplicación y solucionar errores comunes que pueden surgir durante el proceso. Está diseñado para usuarios que tengan conocimientos básicos de Linux y Windows.
+Este manual indica cómo desplegar una aplicación PHP en un servidor EC2 de AWS, configurar Apache y PostgreSQL, restaurar un backup de base de datos, conectar la aplicación y solucionar errores comunes que pueden surgir durante el proceso. Está diseñado para usuarios que tengan conocimientos básicos de Linux y Windows.
 Objetivos
 •	Configurar un servidor EC2 con PHP, Apache y PostgreSQL.
 •	Restaurar un backup de base de datos en PostgreSQL.
 •	Conectar la aplicación PHP con la base de datos.
 •	Documentar los errores comunes y su resolución.
-•	Generar un glosario de comandos y siglas utilizadas.
 ________________________________________
 1. Conexión al servidor EC2 desde Windows
 Desde tu PC con Windows, abre PowerShell o CMD y ejecuta:
@@ -110,4 +109,5 @@ Este manual ofrece un flujo completo para instalar, configurar y desplegar aplic
 4. Tener en cuenta que un alumno solo puede registrar los cursos que existan en la tabla cursos, si se desea registra un alumno con un curso primero el curso debe ser creado en su respectiva tabla.
 5. Al registra un alumno en un curso se habilita un link de descarga para poder generar los respectivos certificados.
 6. El certificado contiene el nombre del estudiante y el título del curso seleccionado.
+
 

@@ -5,7 +5,7 @@ Warning: Identity file mi-proyecto-aws.pem not accessible: No such file or direc
 Permission denied (publickey).
 
 Soluciones aplicadas:
-# Dar permisos correctos a la llave
+## Dar permisos correctos a la llave
 chmod 400 mi-proyecto-aws.pem
 
 # En Windows (PowerShell) usar ruta absoluta
@@ -88,4 +88,5 @@ ssh -i "mi-proyecto-aws.pem" ubuntu@18.222.152.103
 → No estaba instalado PostgreSQL.
 4.	pg_dump: no se pudo abrir archivo
 → Ruta incorrecta al exportar en Windows.
+
 

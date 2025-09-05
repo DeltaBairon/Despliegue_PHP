@@ -16,6 +16,6 @@ class BasicTest extends TestCase
         $html = file_get_contents($url);
 
         // Puedes ajustar el texto esperado según tu página
-        $this->assertStringContainsString('Bienvenido', $html);
+        $this->assertStringContainsString('Inicio se sesión', $html);
     }
 }

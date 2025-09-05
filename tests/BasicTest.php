@@ -1,21 +1,21 @@
 <?php
- // tests/BasicTest.php
- use PHPUnit\Framework\TestCase; 
+// tests/BasicTest.php
+use PHPUnit\Framework\TestCase;
+
 class BasicTest extends TestCase
- { 
-public function testBasicFunctionality() 
-{ 
-$this->assertEquals(2, 1 + 1); 
-    } 
-public function testHomePage() 
-{ 
-// Ajusta según tu framework 
-        $response = file_get_contents('http://localhost/'); 
-$this->assertStringContains('Welcome', $response); 
-    } 
+{
+    public function testBasicFunctionality()
+    {
+        $this->assertEquals(2, 1 + 1);
+    }
 
-    $url = getenv('APP_URL') ?: 'http://localhost';
-    $html = file_get_contents($url);
-    $this->assertStringContainsString('Bienvenido', $html);
+    public function testHomePage()
+    {
+        // Usa variable de entorno APP_URL si existe, de lo contrario localhost:8000
+        $url = getenv('APP_URL') ?: 'http://localhost:8000/';
+        $html = file_get_contents($url);
+
+        // Puedes ajustar el texto esperado según tu página
+        $this->assertStringContainsString('Bienvenido', $html);
+    }
 }
-

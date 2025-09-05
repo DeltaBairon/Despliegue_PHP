@@ -13,4 +13,11 @@ public function testHomePage()
         $response = file_get_contents('http://localhost/'); 
 $this->assertStringContains('Welcome', $response); 
     } 
+public function testHomePage()
+{
+    $url = getenv('APP_URL') ?: 'http://localhost';
+    $html = file_get_contents($url);
+    $this->assertStringContainsString('Bienvenido', $html);
+}
+
 }

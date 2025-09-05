@@ -23,4 +23,4 @@ jobs:
           sudo mv phpunit /usr/local/bin/phpunit
 
       - name: Run PHPUnit tests
-        run: phpunit --testdox test/
+        run: phpunit --testdox tests/

@@ -22,5 +22,10 @@ jobs:
           chmod +x phpunit
           sudo mv phpunit /usr/local/bin/phpunit
 
+      - name: Start PHP built-in server
+        run: php -S localhost:8000 -t . &
+        # 👆 Usa '.' si tu index.php está en la raíz
+        #    Si está en /public pon "-t public/"
+
       - name: Run PHPUnit tests
         run: phpunit --testdox tests/

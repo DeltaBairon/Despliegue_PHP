@@ -1,1 +1,1 @@
-![PHP Tests](https://github.com/DeltaBairon/Despliegue_PHP/workflows/PHP%20Tests/badge.svg)
+![PHP Tests](https://github.com/DeltaBairon/Despliegue_PHP/actions/workflows/php.yml/badge.svg)

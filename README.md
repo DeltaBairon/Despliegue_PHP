@@ -92,14 +92,15 @@ Solución: Se cambió a tests/, que es el nombre correcto de la carpeta.
 - name: Run tests
   run: phpunit --testdox tests/
 ```
-📦 Paso 4: Preparación del Entorno (en servidor EC2)
+✅ Resultado Final
 
-En caso de despliegue en EC2, los pasos son los siguientes:
-```
-sudo apt update
-sudo apt upgrade -y
-sudo apt install python3-pip python3-venv
-```
+Después de aplicar los cambios:
+
+El workflow corre en cada push a la rama main.
+
+PHPUnit ejecuta las pruebas dentro de la carpeta tests/.
+
+El test básico funciona correctamente.
 
 
 

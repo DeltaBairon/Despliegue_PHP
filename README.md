@@ -25,19 +25,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1'
+          php-version: '7.4'
 
       - name: Install PHPUnit
-        run: composer global require phpunit/phpunit
+        run: |
+          wget https://phar.phpunit.de/phpunit-9.6.phar -O phpunit
+          chmod +x phpunit
+          sudo mv phpunit /usr/local/bin/phpunit
 
-      - name: Run tests
+      - name: Start PHP built-in server
+        run: php -S localhost:8000 -t . &
+        # 👆 Usa '.' si tu index.php está en la raíz
+        #    Si está en /public pon "-t public/"
+
+      - name: Run PHPUnit tests
         run: phpunit --testdox tests/
+
 
 ```
 🧪 Paso 2: Creación de Pruebas con PHPUnit
@@ -58,11 +66,15 @@ class BasicTest extends TestCase
 
     public function testHomePage()
     {
-        // Ajustar según el framework
-        $response = file_get_contents('http://localhost/');
-        $this->assertStringContainsString('Welcome', $response);
+        // Usa variable de entorno APP_URL si existe, de lo contrario localhost:8000
+        $url = getenv('APP_URL') ?: 'http://localhost:8000/';
+        $html = file_get_contents($url);
+
+        // Puedes ajustar el texto esperado según tu página
+        $this->assertStringContainsString('Inicio se sesión', $html);
     }
 }
+
 ```
 🛠️ Paso 3: Errores Comunes y Soluciones
 

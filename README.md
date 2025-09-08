@@ -37,6 +37,7 @@ jobs:
       - name: Run tests
         run: phpunit --testdox tests/
 
+```markdown
 ## 🧪 Paso 2: Creación de Pruebas con PHPUnit
 
 Se agregó un archivo de prueba básico en la carpeta `tests/` llamado `BasicTest.php`:
@@ -49,7 +50,7 @@ class BasicTest extends TestCase
 {
     public function testBasicFunctionality()
     {
-        $this->assertEquals(2, 1 + 1);
+        $this->assertTrue(true);
     }
 }
 

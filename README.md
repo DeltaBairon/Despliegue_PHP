@@ -49,8 +49,9 @@ public function testBasicFunctionality()
 * Conexión: AWS Session Manager
 * Almacenamiento: localStorage (Browser)
 
-```
 🧪 Para Desarrolladores
+```
+
     📁 Estructura del Proyecto
     Despliegue_PHP/
     ├── .github/

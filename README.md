@@ -4,29 +4,28 @@
 📋 Descripción del Proyecto
 Aplicación JavaScript vanilla para el seguimiento de gastos personales con las siguientes características:
 
-
 ✅ Persistencia local con localStorage
 ✅ Interfaz responsive y moderna
 
 
 ✅ ¿Qué se automatiza?
-Tests de matemáticas básicas: Verificación de operaciones aritméticas fundamentales
-Validación de HTML: Verificación de estructura y sintaxis del archivo principal
-Validación de PHP: Comprobación de presencia de código PHPen el HTML
-Test de servidor HTTP: Verificación de que Python puede servir la aplicación
+    * Tests de matemáticas básicas: Verificación de operaciones aritméticas fundamentales
+    * Validación de HTML: Verificación de estructura y sintaxis del archivo principal
+    * Validación de PHP: Comprobación de presencia de código PHPen el HTML
+    * Test de servidor HTTP: Verificación de que Python puede servir la aplicación
 
 
 
 🔄 ¿Cuándo se ejecuta la automatización?
-Push a main: Cada vez que se hace push a la rama principal
-Pull Requests: Antes de fusionar cambios al código principal
-Manualmente: Desde la pestaña Actions en GitHub
+    Push a main: Cada vez que se hace push a la rama principal
+    Pull Requests: Antes de fusionar cambios al código principal
+    Manualmente: Desde la pestaña Actions en GitHub
 
 📊 Estado actual del CI/CD:
-El badge de arriba muestra el estado en tiempo real:
+    El badge de arriba muestra el estado en tiempo real:
 
-🟢 Passing: Todos los tests pasan correctamente
-🔴 Failing: Hay errores que necesitan corrección
+* 🟢 Passing: Todos los tests pasan correctamente
+* 🔴 Failing: Hay errores que necesitan corrección
 
 
 📋 Tests incluidos:
@@ -41,29 +40,29 @@ public function testBasicFunctionality()
 ```
 
 🛠️ Tecnologías Utilizadas
-Frontend: HTML5, CSS3
-Bckend: PHP 8 MVC PDO
-CI/CD: GitHub Actions
-Servidor: Localhost apache Server
-Cloud: AWS EC2 (Ubuntu 22.04 LTS)
-Conexión: AWS Session Manager
-Almacenamiento: localStorage (Browser)
+* Frontend: HTML5, CSS3
+* Backend: PHP 8 MVC PDO
+* CI/CD: GitHub Actions
+* Servidor: Localhost apache Server
+* Cloud: AWS EC2 (Ubuntu 22.04 LTS)
+* Conexión: AWS Session Manager
+* Almacenamiento: localStorage (Browser)
 
-
+```
 🧪 Para Desarrolladores
-📁 Estructura del Proyecto
-Despliegue_PHP/
-├── .github/
-│   └── workflows/
-│       └── php.yml      # Workflow de CI/CD documentado
-├── src/
-│   └── index.html             # Aplicación completa (HTML + CSS + JS)
-├── tests/
-│   └── BasicTest.php          # Tests automatizados con Jest
-├
-├── README.md                  # Este archivo (documentación completa)
-└── .gitignore                # Archivos a ignorar en Git
-
+    📁 Estructura del Proyecto
+    Despliegue_PHP/
+    ├── .github/
+    │   └── workflows/
+    │       └── php.yml      # Workflow de CI/CD documentado
+    ├── src/
+    │   └── index.html             # Aplicación completa (HTML + CSS + JS)
+    ├── tests/
+    │   └── BasicTest.php          # Tests automatizados con Jest
+    ├
+    ├── README.md                  # Este archivo (documentación completa)
+    └── .gitignore                # Archivos a ignorar en Git
+```
 # 📘 Documentación del Proyecto
 
 Este documento describe paso a paso el proceso de configuración, despliegue y pruebas automatizadas realizado en este proyecto.  
@@ -148,34 +147,34 @@ Durante la configuración aparecieron errores que se resolvieron:
 
 ❌ Error 1: Invalid workflow file
 
-Causa: Indentación incorrecta en el YAML.
+    Causa: Indentación incorrecta en el YAML.
 
-Solución: Corregir la estructura para que jobs: y steps: quedaran bien alineados.
+    Solución: Corregir la estructura para que jobs: y steps: quedaran bien alineados.
 
 ❌ Error 2: Composer could not find a composer.json file
 
-Causa: No existía composer.json en el proyecto.
+    Causa: No existía composer.json en el proyecto.
 
-Solución: Se eliminó la instalación de dependencias porque no eran necesarias para correr el test básico.
+    Solución: Se eliminó la instalación de dependencias porque no eran necesarias para correr el test básico.
 
 ❌ Error 3: Cannot open file "test/".
 
-Causa: El workflow buscaba la carpeta test/ en singular.
+    Causa: El workflow buscaba la carpeta test/ en singular.
 
-Solución: Se cambió a tests/, que es el nombre correcto de la carpeta.
+    Solución: Se cambió a tests/, que es el nombre correcto de la carpeta.
 ```
 - name: Run tests
   run: phpunit --testdox tests/
 ```
 ✅ Resultado Final
 
-Después de aplicar los cambios:
+    Después de aplicar los cambios:
 
-El workflow corre en cada push a la rama main.
+    El workflow corre en cada push a la rama main.
 
-PHPUnit ejecuta las pruebas dentro de la carpeta tests/.
+    PHPUnit ejecuta las pruebas dentro de la carpeta tests/.
 
-El test básico funciona correctamente.
+    El test básico funciona correctamente.
 
 
 

@@ -9,11 +9,12 @@ Aplicación PHP para registrar cursos y obtener sus certificados.
 
 
 ✅ ¿Qué se automatiza?
-    * Tests de matemáticas básicas: Verificación de operaciones aritméticas fundamentales
-    * Validación de HTML: Verificación de estructura y sintaxis del archivo principal
-    * Validación de PHP: Comprobación de presencia de código PHPen el HTML
-    * Test de servidor HTTP: Verificación de que Python puede servir la aplicación
-
+```
+       * Tests de matemáticas básicas: Verificación de operaciones aritméticas fundamentales
+       * Validación de HTML: Verificación de estructura y sintaxis del archivo principal
+       * Validación de PHP: Comprobación de presencia de código PHPen el HTML
+       * Test de servidor HTTP: Verificación de que Python puede servir la aplicación
+```
 
 
 🔄 ¿Cuándo se ejecuta la automatización?

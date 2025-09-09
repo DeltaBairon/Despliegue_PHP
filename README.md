@@ -2,7 +2,7 @@
 
 
 📋 Descripción del Proyecto
-Aplicación JavaScript vanilla para el seguimiento de gastos personales con las siguientes características:
+Aplicación PHP para registrar cursos y obtener sus certificados.
 
 ✅ Persistencia local con localStorage
 ✅ Interfaz responsive y moderna

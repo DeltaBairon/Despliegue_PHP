@@ -6,7 +6,7 @@ class BasicTest extends TestCase
 {
     public function testBasicFunctionality()
     {
-        $this->assertEquals(2, 1 + 3);
+        $this->assertEquals(2, 1 + 1);
     }
 
     public function testHomePage()

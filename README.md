@@ -67,14 +67,16 @@ public function testBasicFunctionality()
 ```
 # 📘 Documentación del Proyecto
 
-Este documento describe paso a paso el proceso de configuración, despliegue y pruebas automatizadas realizado en este proyecto.  
-Se incluyen también los errores encontrados y sus soluciones.
+Este documento describe paso a paso el proceso de configuración, despliegue y 
+pruebas automatizadas realizado en este proyecto.  Se incluyen también los errores  
+encontrados y sus soluciones.
 
 ---
 
 ## ⚙️ Paso 1: Configuración de GitHub Actions
 
-Se creó el archivo de workflow dentro de la carpeta `.github/workflows/` con el nombre `php.yml`:
+Se creó el archivo de workflow dentro de la 
+carpeta `.github/workflows/` con el nombre `php.yml`:
 
 ```yaml
 name: PHP Tests
@@ -113,7 +115,8 @@ jobs:
 ```
 🧪 Paso 2: Creación de Pruebas con PHPUnit
 
-Se agregó un archivo de prueba básico en la carpeta tests/ llamado BasicTest.php:
+Se agregó un archivo de prueba básico en la carpeta tests/ 
+llamado BasicTest.php:
 
 ```php
 <?php
@@ -141,7 +144,8 @@ class BasicTest extends TestCase
 ```
 🛠️ Paso 3: Errores Comunes y Soluciones
 
-Durante el desarrollo se presentaron varios errores, aquí se documentan de forma resumida:
+Durante el desarrollo se presentaron varios errores, aquí se 
+documentan de forma resumida:
 
 🛠️ Paso 3: Errores y Soluciones
 
@@ -151,13 +155,15 @@ Durante la configuración aparecieron errores que se resolvieron:
 
     Causa: Indentación incorrecta en el YAML.
 
-    Solución: Corregir la estructura para que jobs: y steps: quedaran bien alineados.
+    Solución: Corregir la estructura para 
+    que jobs: y steps: quedaran bien alineados.
 
 ❌ Error 2: Composer could not find a composer.json file
 
     Causa: No existía composer.json en el proyecto.
 
-    Solución: Se eliminó la instalación de dependencias porque no eran necesarias para correr el test básico.
+    Solución: Se eliminó la instalación de dependencias porque no eran 
+    necesarias para correr el test básico.
 
 ❌ Error 3: Cannot open file "test/".
 

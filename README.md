@@ -1,6 +1,68 @@
 ![PHP Tests](https://github.com/DeltaBairon/Despliegue_PHP/actions/workflows/php.yml/badge.svg)
 
 
+📋 Descripción del Proyecto
+Aplicación JavaScript vanilla para el seguimiento de gastos personales con las siguientes características:
+
+
+✅ Persistencia local con localStorage
+✅ Interfaz responsive y moderna
+
+
+✅ ¿Qué se automatiza?
+Tests de matemáticas básicas: Verificación de operaciones aritméticas fundamentales
+Validación de HTML: Verificación de estructura y sintaxis del archivo principal
+Validación de PHP: Comprobación de presencia de código PHPen el HTML
+Test de servidor HTTP: Verificación de que Python puede servir la aplicación
+
+
+
+🔄 ¿Cuándo se ejecuta la automatización?
+Push a main: Cada vez que se hace push a la rama principal
+Pull Requests: Antes de fusionar cambios al código principal
+Manualmente: Desde la pestaña Actions en GitHub
+
+📊 Estado actual del CI/CD:
+El badge de arriba muestra el estado en tiempo real:
+
+🟢 Passing: Todos los tests pasan correctamente
+🔴 Failing: Hay errores que necesitan corrección
+
+
+📋 Tests incluidos:
+1. Tests de Matemáticas Básicas
+
+```
+public function testBasicFunctionality()
+    {
+        $this->assertEquals(2, 1 + 3);
+
+
+```
+
+🛠️ Tecnologías Utilizadas
+Frontend: HTML5, CSS3
+Bckend: PHP 8 MVC PDO
+CI/CD: GitHub Actions
+Servidor: Localhost apache Server
+Cloud: AWS EC2 (Ubuntu 22.04 LTS)
+Conexión: AWS Session Manager
+Almacenamiento: localStorage (Browser)
+
+
+🧪 Para Desarrolladores
+📁 Estructura del Proyecto
+Despliegue_PHP/
+├── .github/
+│   └── workflows/
+│       └── php.yml      # Workflow de CI/CD documentado
+├── src/
+│   └── index.html             # Aplicación completa (HTML + CSS + JS)
+├── tests/
+│   └── BasicTest.php          # Tests automatizados con Jest
+├
+├── README.md                  # Este archivo (documentación completa)
+└── .gitignore                # Archivos a ignorar en Git
 
 # 📘 Documentación del Proyecto
 

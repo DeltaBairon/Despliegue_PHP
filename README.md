@@ -262,18 +262,20 @@ node_modules
 Se instala Docker para poder generar el proceso de virtualización, pero indica que no la detecta
 se verifica en el taskmanager de windoes que se encuentra habilitada 
 ```
-<img width="921" height="506" alt="image" src="https://github.com/user-attachments/assets/2b65b3aa-70c9-4ad3-bcc1-f5401a55d324" />
+Error: Virtualización support not deteted
+
+Docker desktop requires virtualization support to run. Contact your IT admin to
+enable virtualization or check system requirements
 ```
-✅ Se instalan complementos necesarios wls para la virtualización 
+✅ Se instalan complementos necesarios wls para la virtualización desde powershell
 
 ```
-<img width="921" height="528" alt="image" src="https://github.com/user-attachments/assets/61244cf9-cfba-4a5a-8757-8fb3904bb77c" />
+wls --install
 
 ```
 ✅ Una vez instalado el WSL (Subsistema de Windows para Linux)
 nos permite interactuar con docker.
-```
-<img width="1873" height="1071" alt="image" src="https://github.com/user-attachments/assets/00c20e08-f282-4e33-a127-c8c800632c42" />
+
 
 
 

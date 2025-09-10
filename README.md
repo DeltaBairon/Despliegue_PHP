@@ -186,5 +186,95 @@ Durante la configuración aparecieron errores que se resolvieron:
     El test básico funciona correctamente.
 
 
+Despliegue de Aplicación PHP con Docker
 
->>>>>>> 6fb7c32aa5e1ec00f64acc077b7e899459c7ddca
+Este proyecto contiene una aplicación en PHP que se ejecuta sobre Apache y se distribuye mediante Docker.
+
+🚀 Requisitos
+
+Docker
+ instalado y corriendo.
+
+(Opcional) Docker Compose
+ para gestionar múltiples servicios.
+ ```
+ ```
+🚀 Requisitos
+
+Docker
+ instalado y corriendo.
+
+(Opcional) Docker Compose
+ para gestionar múltiples servicios.
+
+📂 Estructura del proyecto
+ ```
+Aplicación/
+│── secciones/
+│── styles/
+│── templates/
+│── tests/
+│── index.php
+│── Dockerfile
+│── .dockerignore
+
+```
+🐳 En en archivo docker file 
+```
+# Dockerfile
+FROM php:8.1-apache
+COPY . /var/www/html/
+
+EXPOSE 80
+
+ ```
+🐳 Construcción de la imagen
+
+Desde la raíz del proyecto, ejecutar:
+ ```
+docker build -t despliegue-php .
+ ```
+▶️ Ejecución del contenedor
+
+Levantar la aplicación en el puerto 8080:
+ ```
+docker run -p 8080:80 despliegue-php
+ ```
+Luego acceder en el navegador a:
+👉 http://localhost:8080
+
+🛑 Detener el contenedor
+
+Si lo ejecutaste en primer plano, simplemente usa Ctrl + C.
+Si lo corres en modo detached (-d), primero lista los contenedores:
+```
+```
+⚙️ Ignorando archivos innecesarios / archivo docker file ignore
+```
+El archivo .dockerignore asegura que solo se copien al contenedor
+los archivos necesarios para la aplicación.
+node_modules
+.git
+.env
+*.md
+```
+❌ Errores presentados
+Se instala Docker para poder generar el proceso de virtualización, pero indica que no la detecta
+se verifica en el taskmanager de windoes que se encuentra habilitada 
+```
+<img width="921" height="506" alt="image" src="https://github.com/user-attachments/assets/2b65b3aa-70c9-4ad3-bcc1-f5401a55d324" />
+```
+✅ Se instalan complementos necesarios wls para la virtualización 
+
+```
+<img width="921" height="528" alt="image" src="https://github.com/user-attachments/assets/61244cf9-cfba-4a5a-8757-8fb3904bb77c" />
+
+```
+✅ Una vez instalado el WSL (Subsistema de Windows para Linux)
+nos permite interactuar con docker.
+```
+<img width="1873" height="1071" alt="image" src="https://github.com/user-attachments/assets/00c20e08-f282-4e33-a127-c8c800632c42" />
+
+
+
+

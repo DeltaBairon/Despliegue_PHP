@@ -4,7 +4,7 @@
 
 
 📋 Descripción del Proyecto
-Aplicación PHP para registrar cursos y obtener sus certificados.
+Aplicación PHP para registrar cursos y obtener sus certificados, despligue, github actions y docker.
 
 ✅ Persistencia local con localStorage
 ✅ Interfaz responsive y moderna
@@ -32,7 +32,7 @@ Aplicación PHP para registrar cursos y obtener sus certificados.
 
 
 📋 Tests incluidos:
-1. Tests de Matemáticas Básicas
+Tests de Matemáticas Básicas
 
 ```
 public function testBasicFunctionality()
@@ -75,7 +75,7 @@ encontrados y sus soluciones.
 
 ---
 
-## ⚙️ Paso 1: Configuración de GitHub Actions
+## ⚙️ Configuración de GitHub Actions
 
 Se creó el archivo de workflow dentro de la 
 carpeta `.github/workflows/` con el nombre `php.yml`:
@@ -115,7 +115,7 @@ jobs:
 
 
 ```
-🧪 Paso 2: Creación de Pruebas con PHPUnit
+🧪 Creación de Pruebas con PHPUnit
 
 Se agregó un archivo de prueba básico en la carpeta tests/ 
 llamado BasicTest.php:
@@ -144,7 +144,7 @@ class BasicTest extends TestCase
 }
 
 ```
-🛠️ Paso 3: Errores Comunes y Soluciones
+🛠️  Errores Comunes y Soluciones
 
 Durante el desarrollo se presentaron varios errores, aquí se 
 documentan de forma resumida:
@@ -282,7 +282,7 @@ Debe mostrar:
 pdo_pgsql
 pgsql
 ```
-📂 5. Copiar el backup al contenedor de Postgres
+📂 Copiar el backup al contenedor de Postgres
 ```
 docker cp "C:\xampp\htdocs\pos.backup.sql" postgres_db:/pos.backup.sql
 
@@ -305,7 +305,7 @@ head -n 5 /pos.backup.sql
 psql -U postgres -d pos -f /pos.backup.sql
 ```
 
-🔍 7. Confirmar que las tablas están cargadas
+🔍 Confirmar que las tablas están cargadas
 ```
 \dn                -- Ver esquemas
 \dt escuela.*      -- Listar tablas dentro del esquema escuela

@@ -224,13 +224,94 @@ Aplicación/
 ```
 # Dockerfile
 FROM php:8.1-apache
+
+# Copiar aplicación al contenedor
 COPY . /var/www/html/
 
+# Instalar extensiones necesarias para PostgreSQL
+RUN apt-get update \
+    && apt-get install -y libpq-dev \
+    && docker-php-ext-install pdo_pgsql pgsql
+
+# Exponer el puerto
 EXPOSE 80
 
- ```
-🐳 Construcción de la imagen
 
+ ```
+⚙️ Crear el docker-compose.yml
+```
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: php_app
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=pos
+      - DB_USER=postgres
+      - DB_PASS=root123
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      - POSTGRES_DB=pos
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root123
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+
+```
+🎧Confirmar que pdo_pgsql está instalado en PHP
+Debe mostrar:
+```
+pdo_pgsql
+pgsql
+```
+📂 5. Copiar el backup al contenedor de Postgres
+```
+docker cp "C:\xampp\htdocs\pos.backup.sql" postgres_db:/pos.backup.sql
+
+```
+Verifica dentro del contenedor:
+```
+docker exec -it postgres_db bash
+ls -l /
+
+```
+🗄️Restaurar la base de datos
+🔎 Verificar tipo de archivo
+```
+head -n 5 /pos.backup.sql
+```
+
+▶️ Restaurar SQL plano
+
+```
+psql -U postgres -d pos -f /pos.backup.sql
+```
+
+🔍 7. Confirmar que las tablas están cargadas
+```
+\dn                -- Ver esquemas
+\dt escuela.*      -- Listar tablas dentro del esquema escuela
+```
+
+🐳 Construcción de la imagen
 Desde la raíz del proyecto, ejecutar:
  ```
 docker build -t despliegue-php .
